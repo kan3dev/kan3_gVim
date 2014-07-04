@@ -1,4 +1,7 @@
 set nocompatible                                            " Выключает режи совместимости с vi
+" Настройка кодировки utf-8
+set encoding=utf-8
+lan mes ru_RU.UTF-8
 
 " -------------------------------------------------------------- "
 "       Для Vundle  https://github.com/gmarik/Vundle.vim         "
@@ -25,6 +28,8 @@ set ruler                                                   " Показыват
 set number                                                  " Показывать номера строк
 syntax on                                                   " Подсветка синтаксиса
 set nofoldenable                                            " Запрещаем сворачиваение коды при открытии
+set list                                                    " Отображать скрытые символы
+set listchars=trail:.
 
 " Тема
 let g:molokai_original=1                                    " Оригинальный цвет фона
@@ -38,5 +43,5 @@ set expandtab                                               " Заменяет �
 set autoindent                                              " Автоматические отступы
 set smartindent                                             " Автоматические отступы
 
-" Отступы Python
-" autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+" Настройка плагина Python mode
+let g:pymode_lint_ignore = "E501,W"                         " Игнрируем правила PEP8
