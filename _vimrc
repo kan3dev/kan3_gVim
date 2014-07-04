@@ -3,6 +3,11 @@ set nocompatible                                            " Выключает
 set encoding=utf-8
 lan mes ru_RU.UTF-8
 
+"// Настройка папки .vim для windows
+if has("win32") || has("win64")
+    set runtimepath^=~/.vim
+endif
+
 " -------------------------------------------------------------- "
 "       Для Vundle  https://github.com/gmarik/Vundle.vim         "
 " -------------------------------------------------------------- "
